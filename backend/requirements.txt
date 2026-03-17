@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+endee
+sentence-transformers
+pydantic
+python-multipart
