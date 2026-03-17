@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endee AI Semantic Search</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="background-elements">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="app-container">
+        <header class="app-header">
+            <div class="logo-area">
+                <i data-lucide="database" class="logo-icon"></i>
+                <h1><span class="gradient-text">Sinchu</span> Vector Search API</h1>
+            </div>
+            <p class="subtitle">Experience ultra-fast, semantic knowledge retrieval powered by an open-source vector
+                database.</p>
+        </header>
+
+        <div class="panels-wrapper">
+            <!-- Ingest Panel -->
+            <section class="glass-panel main-panel">
+                <div class="panel-header">
+                    <i data-lucide="database-zap"></i>
+                    <h2>Knowledge Ingestion</h2>
+                </div>
+                <div class="panel-content">
+                    <div class="input-group">
+                        <label for="doc-title">Document Title</label>
+                        <input type="text" id="doc-title" placeholder="e.g. Endee Configuration Guide">
+                    </div>
+                    <div class="input-group">
+                        <label for="doc-content">Knowledge Content</label>
+                        <textarea id="doc-content" rows="6"
+                            placeholder="Paste knowledge here to chunk, embed, and insert into the vector database..."></textarea>
+                    </div>
+                    <button id="ingest-btn" class="primary-btn pulse-glow">
+                        <span>Embed & Store</span>
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                    <div id="ingest-status" class="status-msg hidden"></div>
+                </div>
+            </section>
+
+            <!-- Search Panel -->
+            <section class="glass-panel main-panel">
+                <div class="panel-header">
+                    <i data-lucide="search"></i>
+                    <h2>Semantic Retrieval</h2>
+                </div>
+                <div class="panel-content">
+                    <div class="search-box">
+                        <i data-lucide="sparkles" class="search-icon"></i>
+                        <input type="text" id="search-query" placeholder="Ask a question or search for concepts...">
+                        <button id="search-btn" class="icon-btn" aria-label="Search">
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <div id="results-area" class="results-container mt-4">
+                        <div class="empty-state">
+                            <i data-lucide="book-open"></i>
+                            <p>Search results will appear here</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
