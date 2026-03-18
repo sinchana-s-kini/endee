@@ -56,7 +56,7 @@ Final AI Response + Sources
 | Backend    | FastAPI (Python)                         |
 | Embeddings | Sentence Transformers (all-MiniLM-L6-v2) |
 | Vector DB  | Endee                                    |
-| AI Model   | Google Gemini (gemini-2.5-flash)         |
+| AI Model   | Google Gemini (gemma-3-1b-it)         |
 | Frontend   | HTML, CSS, JavaScript                    |
 | Deployment | Docker                                   |
 
@@ -162,8 +162,8 @@ GET /api/health
 ### 🔹 Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/sinchana-s-kini/endee.git
+cd endee
 ```
 
 ---
@@ -208,9 +208,8 @@ GEMINI_API_KEY=your_api_key_here
 After ingesting data, try:
 
 * `who is Sinchana`
-* `what project is this`
-* `explain semantic search`
-* `tell me about my college events`
+* `what is Vstand4U`
+
 
 ---
 
