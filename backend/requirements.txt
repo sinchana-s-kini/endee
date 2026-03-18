@@ -4,3 +4,4 @@ endee
 sentence-transformers
 pydantic
 python-multipart
+google-genai

@@ -136,26 +136,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 answerCard.className = 'ai-answer-card';
                 answerCard.innerHTML = `
                     <div class="ai-answer-header">
-                        <i data-lucide="bot"></i>
-                        <span>AI Synthesized Answer</span>
+                        <i data-lucide="bot" style="color:var(--primary);margin-right:8px;vertical-align:middle;"></i>
+                        <span>AI Assistant</span>
                     </div>
-                    <div class="ai-answer-content">
+                    <div class="ai-answer-content" style="padding-top:10px;">
                         ${data.answer.replace(/\n/g, '<br/>')}
                     </div>
                 `;
                 resultsArea.appendChild(answerCard);
+            } else {
+                 resultsArea.innerHTML = `
+                <div class="empty-state">
+                    <i data-lucide="frown"></i>
+                    <p>No highly relevant results found.</p>
+                </div>
+                `;
             }
 
-            // Render Sources label
-            if (data.results && data.results.length > 0) {
-                const sourcesLabel = document.createElement('div');
-                sourcesLabel.className = 'sources-label';
-                sourcesLabel.innerHTML = '<h4>Retrieved Context Sources</h4>';
-                resultsArea.appendChild(sourcesLabel);
-            }
-
-            // Render raw chunks (Results)
-            renderResults(data.results, false); // pass false so we append instead of clear
+            lucide.createIcons();
 
         } catch (error) {
             resultsArea.innerHTML = `
